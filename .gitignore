@@ -1,0 +1,7 @@
+*.pyc
+__pycache__/
+instance/
+.env
+*.sqlite3
+expenses.csv
+

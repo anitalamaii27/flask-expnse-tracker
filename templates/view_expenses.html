@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Expenses</title>
+</head>
+<body>
+    <h2>All Expenses</h2>
+    {% if expenses %}
+        <table border="1">
+            <tr><th>Date</th><th>Description</th><th>Amount</th><th>Category</th></tr>
+            {% for expense in expenses %}
+                <tr>
+                    <td>{{ expense.date }}</td>
+                    <td>{{ expense.description }}</td>
+                    <td>${{ expense.amount }}</td>
+                    <td>{{ expense.category }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        <p>No expenses found.</p>
+    {% endif %}
+    <br>
+    <a href="/">⬅️ Back to Home</a>
+</body>
+</html>

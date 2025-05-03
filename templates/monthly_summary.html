@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Monthly Summary</title>
+</head>
+<body>
+    <h2>Monthly Summary</h2>
+    <ul>
+        {% for month, total in summary.items() %}
+            <li>{{ month }}: ${{ total }}</li>
+        {% endfor %}
+    </ul>
+    <br>
+    <a href="/">⬅️ Back to Home</a>
+</body>
+</html>

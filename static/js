@@ -1,0 +1,8 @@
+// If you want to add interactivity, such as a confirmation dialog before deleting an expense
+document.querySelectorAll('.btn-danger').forEach(button => {
+    button.addEventListener('click', function(event) {
+        if (!confirm("Are you sure you want to delete this expense?")) {
+            event.preventDefault();
+        }
+    });
+});
