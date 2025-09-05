@@ -3,7 +3,7 @@ import csv
 import os
 from datetime import datetime
 
-app = Flask(__name__)
+application = Flask(__name__) 
 CSV_FILE = 'expenses.csv'  # Relative path for Render
 
 # ------------------ CSV Operations ------------------ #
@@ -76,4 +76,5 @@ def export_csv():
 # ------------------ Main ------------------ #
 if __name__ == '__main__':
     app.run()
+
 
